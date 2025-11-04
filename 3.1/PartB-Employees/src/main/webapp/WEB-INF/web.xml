@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" version="5.0">
+    <display-name>Part B - Employees</display-name>
+
+    <context-param>
+        <param-name>jdbc.url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/companydb?useSSL=false&serverTimezone=UTC</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbc.username</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbc.password</param-name>
+        <param-value>password</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>com.example.partb.EmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/employees</url-pattern>
+    </servlet-mapping>
+</web-app>
+
